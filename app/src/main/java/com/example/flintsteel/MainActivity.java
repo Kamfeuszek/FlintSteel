@@ -61,8 +61,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void selectContact() {
-        Intent intent = new Intent(Intent.ACTION_PICK);
-        intent.setType(ContactsContract.Contacts.CONTENT_TYPE);
+        Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
         try {
             startActivity(intent);
         } catch (Exception e) {
